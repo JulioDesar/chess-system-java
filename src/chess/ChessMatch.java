@@ -52,7 +52,7 @@ public class ChessMatch {
 		Piece capturedPiece = board.removePiece(target);
 		board.placePiece(p, target);
 		
-		return capturedPiece;
+		return capturedPiece; 
 	}
 
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
