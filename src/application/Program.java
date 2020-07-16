@@ -13,34 +13,34 @@ public class Program {
 	public static void main(String[] args) {
 
 		Scanner cap = new Scanner(System.in);
-		
+
 		ChessMatch chessMatch = new ChessMatch();
 
 		while (true) {
 			try {
-			
+
 				UI.clearScreen();
 				UI.printBoard(chessMatch.getPiece());
 				System.out.println();
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(cap);
-				
+
 				System.out.println();
 				System.out.print("Target: ");
 				ChessPosition target = UI.readChessPosition(cap);
-				
+
 				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
-				
-			} catch(ChessException e) {
-				
+
+			} catch (ChessException e) {
+
 				System.out.println(e.getMessage());
 				cap.nextLine();
-				
-			} catch(InputMismatchException e) {
-				
+
+			} catch (InputMismatchException e) {
+
 				System.out.println(e.getMessage());
 				cap.nextLine();
-				
+
 			}
 		}
 	}
